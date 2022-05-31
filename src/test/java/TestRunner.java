@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"},
         features = "src/test/resources/features",
         glue = {"StepsDefinition"},
-        tags = "@Test"
+        tags = "@Test1 or @Test2"
 )
 
 public class TestRunner {
