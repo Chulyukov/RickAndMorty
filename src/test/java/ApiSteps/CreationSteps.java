@@ -1,6 +1,7 @@
 package ApiSteps;
 
 import io.qameta.allure.Step;
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.http.ContentType;
 import org.json.JSONObject;
 import io.restassured.path.json.JsonPath;
@@ -29,6 +30,7 @@ public class CreationSteps {
     @Step("Делаем запрос на создание юзера, меняем данные")
     public void doCreationResponse() {
         reqres = given()
+                .filter(new AllureRestAssured())
                 .body(body.toString())
                 .when()
                 .contentType(ContentType.JSON)
